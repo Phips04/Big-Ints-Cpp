@@ -10,6 +10,8 @@ Most important imrovements will be:
 -An inheritance system
 </!>
 
+The new version for .NET has been released today, the c++ version will take over its structure
+
 This library provides seven different types (classes).
 Basic arithmetic functions are implemented (+; -; *; /).
 Additional functions included are a power function, logarithm and roots.
