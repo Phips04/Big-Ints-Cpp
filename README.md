@@ -1,17 +1,22 @@
 # Big-Ints-Cpp
 Use unsigned integers providing 128, 256, 512, ..., 16384 bits of memory, written in standard C++
 
-<!>
-This is an early prototype of the final library, changements will come soon.
-The basic library is availabel now, actually it has NOT BEEN TESTED
-</!>
+Types for big integers based on bit arrays providing up to 16384 bits, in standard C++
 
-The new version for .NET has been released today, the c++ version will take over its structure
+The given types provide access to eight different types for calculations with extremly large natural numbers.
+Types are Uint128, ...256, ...512, ..., Uint16384. Because of the base class witch holds nearly every important item,
+its very easy to extend the existing types using your own classes. At least constructors and macros must be included.
 
-This library provides seven different types (classes).
-Basic arithmetic functions are implemented (+; -; *; /).
-Additional functions included are a power function, logarithm and roots.
-Constructors take bitsets, strings representing binary sequences, ints, and lower Big Ints.
-Makros define smallest and biggest possible value.
+Exrensive computations might have a massive impact on performance.
+Mostly affected are:
 
-...Might be extended in future...
+*Square root
+*Logarithm
+*Division
+
+This mainly depends on time expensive conversions to std::string during the process of division.
+Finding the logarithm requires Log2(Log2(Max value of type)) computations. e.g. Uint1024 => 10
+
+Sqrt requires Log2(Sqrt(Max value of type)) computations. e.g. Uint8192 => 91
+
+A corresponding library for .NET core exists, written in C#
